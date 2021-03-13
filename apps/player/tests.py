@@ -1,10 +1,24 @@
 from rest_framework import status, test
 
-from .models import Player
-
+from apps.team.models import Team
+from apps.player.models import Player
 
 
 class PlayerCreateTestCase(test.APITestCase):
+
+    def setUp(self):
+        Team.objects.create(
+            name="FC Othmane",
+            country="France",
+            league="Ligue 1",
+            overall=0,
+            attack=0,
+            midfield=0,
+            defence=0,
+            transfer_budget=0,
+            players=0,
+            hits=0
+        )
 
     def test_create_player(self):
         """
@@ -19,7 +33,7 @@ class PlayerCreateTestCase(test.APITestCase):
             "age": 20,
             "overall_rating":99,
             "potential": 99,
-            "club": "Lille OSC",
+            "club": "FC Othmane",
             "height": 180,
             "weight": 80,
             "foot": "Left",
@@ -45,6 +59,19 @@ class PlayerCreateTestCase(test.APITestCase):
 class PlayerUpdateTestCase(test.APITestCase):
 
     def setUp(self):
+        Team.objects.create(
+            name="FC Othmane",
+            country="France",
+            league="Ligue 1",
+            overall=0,
+            attack=0,
+            midfield=0,
+            defence=0,
+            transfer_budget=0,
+            players=0,
+            hits=0
+        )
+
         Player.objects.create(
             short_name="O. Belarbi",
             full_name="Othmane Belarbi",
@@ -52,7 +79,7 @@ class PlayerUpdateTestCase(test.APITestCase):
             age=20,
             overall_rating=9,
             potential=99,
-            club="Lille OSC",
+            club="FC Othmane",
             height=180,
             weight=80,
             foot="Left",
@@ -80,7 +107,7 @@ class PlayerUpdateTestCase(test.APITestCase):
             "age": 20,
             "overall_rating":0,
             "potential": 0,
-            "club": "Lille OSC",
+            "club": "FC Barcelone",
             "height": 180,
             "weight": 80,
             "foot": "Left",
@@ -105,6 +132,19 @@ class PlayerUpdateTestCase(test.APITestCase):
 class PlayerDeleteTestCase(test.APITestCase):
 
     def setUp(self):
+        Team.objects.create(
+            name="FC Othmane",
+            country="France",
+            league="Ligue 1",
+            overall=0,
+            attack=0,
+            midfield=0,
+            defence=0,
+            transfer_budget=0,
+            players=0,
+            hits=0
+        )
+
         Player.objects.create(
             short_name="O. Belarbi",
             full_name="Othmane Belarbi",
@@ -112,7 +152,7 @@ class PlayerDeleteTestCase(test.APITestCase):
             age=20,
             overall_rating=9,
             potential=99,
-            club="Lille OSC",
+            club="FC Othmane",
             height=180,
             weight=80,
             foot="Left",
