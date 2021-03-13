@@ -1,6 +1,12 @@
 # FIFA 21 API
 The REST API is written in Django for FIFA 21 Players
 
+## Overview
+
+**Below**: *Screenshot from the browsable API*
+
+![alt text](/assets/image/overview.png "Browsable API")
+
 
 ## Technologies used
 * [Django Rest Framework](https://www.django-rest-framework.org): Django REST framework is a powerful and flexible toolkit for building Web APIs.
