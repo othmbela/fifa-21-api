@@ -1,6 +1,8 @@
 from django.db import models
 
-from .fields import IntegerRangeField
+from apps.team.models import Team
+from apps.player.fields import IntegerRangeField
+
 
 class Player(models.Model):
 
@@ -33,7 +35,7 @@ class Player(models.Model):
     age            = IntegerRangeField(min_value=0, max_value=100)
     overall_rating = IntegerRangeField(min_value=0, max_value=100)
     potential      = IntegerRangeField(min_value=0, max_value=100)
-    club           = models.CharField(max_length=255)
+    club           = models.ForeignKey(Team, to_field="name", db_column="club", on_delete=models.CASCADE)
     height         = models.FloatField(default=0.0)
     weight         = models.FloatField(default=0.0)
     foot           = models.CharField(max_length=5, choices=FOOT)

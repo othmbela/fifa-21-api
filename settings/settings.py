@@ -47,6 +47,7 @@ INSTALLED_APPS = [
 
     # CUSTOM_APPS
     'apps.player',
+    'apps.team',
 ]
 
 MIDDLEWARE = [
