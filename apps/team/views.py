@@ -1,14 +1,15 @@
+from rest_framework.viewsets import ModelViewSet
 from rest_framework.generics import (
     ListAPIView,
     CreateAPIView,
     UpdateAPIView,
     DestroyAPIView,
 )
-from rest_framework.response import Response
 
 from .models import Team
 from .serializers import TeamSerializer
-from .pagination import PaginationPageNumberPagination
+from utils.pagination import PaginationPageNumberPagination
+
 
 
 class TeamListAPIView(ListAPIView):

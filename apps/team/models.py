@@ -1,6 +1,6 @@
 from django.db import models
 
-from .fields import IntegerRangeField
+from utils.fields import IntegerRangeField
 
 class Team(models.Model):
 				

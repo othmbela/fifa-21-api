@@ -1,5 +1,5 @@
 # FIFA 21 API
-The REST API is written in Django for FIFA 21 Players
+The REST API is written in Django for FIFA 21
 
 ## Overview
 
@@ -50,6 +50,47 @@ The REST API is written in Django for FIFA 21 Players
         http://localhost:8000
     ```
 
+
+# Files and Folders structure
+
+```
+├── .env.example
+├── .gitignore
+├── docker-compose.yml
+├── Dockerfile
+├── manage.py
+├── requirements.txt
+├── assets
+│   └── images
+├── settings
+│   └── settings.py
+├── utils
+│   ├── fields.py
+│   └── pagination.py
+├── api
+│   ├── __init__.py
+│   ├── asgi.py
+│   ├── urls.py
+│   └── wsgi.py
+└── apps
+    ├── __init__.py
+    ├── player
+    │   ├── admin.py
+    │   ├── apps.py
+    │   ├── models.py
+    │   ├── serializers.py
+    │   ├── tests.py
+    │   ├── urls.py
+    │   └── views.py
+    └── team
+        ├── admin.py
+        ├── apps.py
+        ├── models.py
+        ├── serializers.py
+        ├── tests.py
+        ├── urls.py
+        └── views.py
+```
 
 ## Author
 

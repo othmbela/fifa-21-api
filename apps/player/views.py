@@ -4,11 +4,11 @@ from rest_framework.generics import (
     UpdateAPIView,
     DestroyAPIView,
 )
-from rest_framework.response import Response
 
 from .models import Player
 from .serializers import PlayerSerializer
-from .pagination import PaginationPageNumberPagination
+
+from utils.pagination import PaginationPageNumberPagination
 
 
 class PlayerListAPIView(ListAPIView):
